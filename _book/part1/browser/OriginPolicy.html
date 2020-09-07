@@ -1,0 +1,2170 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>同源策略 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="OriginPolicy.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="render.html">
+            
+                <a href="render.html">
+            
+                    
+                    渲染机制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1.1" data-path="render.html">
+            
+                <a href="render.html">
+            
+                    
+                    DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.2" data-path="render.html">
+            
+                <a href="render.html">
+            
+                    
+                    重绘/回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.3" data-path="render.html">
+            
+                <a href="render.html">
+            
+                    
+                    shadow DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.4" data-path="render.html">
+            
+                <a href="render.html">
+            
+                    
+                    渲染阻塞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    浏览器缓存
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.2.1" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    HTTP缓存
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.2.1.1" >
+            
+                <span>
+            
+                    
+                    强缓存
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.1.2" >
+            
+                <span>
+            
+                    
+                    协商缓存
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.2" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    本地存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.2.3.1" >
+            
+                <span>
+            
+                    
+                    Cookie
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.3.2" >
+            
+                <span>
+            
+                    
+                    Storage
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.3.3" >
+            
+                <span>
+            
+                    
+                    IndexDB
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.3" data-path="OriginPolicy.html">
+            
+                <a href="OriginPolicy.html">
+            
+                    
+                    同源策略
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1.3.1" data-path="OriginPolicy.html">
+            
+                <a href="OriginPolicy.html">
+            
+                    
+                    跨域访问方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.4.1" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.4.1.1" >
+            
+                <span>
+            
+                    
+                    资源加载优化
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.1.2" >
+            
+                <span>
+            
+                    
+                    渲染优化
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.2" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    SEO优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.4.2.1" >
+            
+                <span>
+            
+                    
+                    meta标签
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="safety.html">
+            
+                <a href="safety.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.1" data-path="safety.html">
+            
+                <a href="safety.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.2" data-path="safety.html">
+            
+                <a href="safety.html">
+            
+                    
+                    SSL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.3" data-path="safety.html">
+            
+                <a href="safety.html">
+            
+                    
+                    TLS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.3.1" >
+            
+                <span>
+            
+                    
+                    非对称加密原理
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.4" data-path="safety.html">
+            
+                <a href="safety.html">
+            
+                    
+                    网络攻击
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.4.1" >
+            
+                <span>
+            
+                    
+                    XSS
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.4.2" >
+            
+                <span>
+            
+                    
+                    CSRF
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.4.3" >
+            
+                <span>
+            
+                    
+                    iframe
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.4.4" >
+            
+                <span>
+            
+                    
+                    opener
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.4.5" >
+            
+                <span>
+            
+                    
+                    ClickJacking
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.4.6" >
+            
+                <span>
+            
+                    
+                    HSTS
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.4.7" >
+            
+                <span>
+            
+                    
+                    CDN劫持
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../htmlcontent/">
+            
+                <a href="../htmlcontent/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../htmlcontent/">
+            
+                <a href="../htmlcontent/">
+            
+                    
+                    HTML5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../htmlcontent/semanticTag.html">
+            
+                <a href="../htmlcontent/semanticTag.html">
+            
+                    
+                    语义化标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="../htmlcontent/canvasSvg.html">
+            
+                <a href="../htmlcontent/canvasSvg.html">
+            
+                    
+                    canvas & svg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../htmlcontent/responsive.html">
+            
+                <a href="../htmlcontent/responsive.html">
+            
+                    
+                    响应式 meta
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../CSS/">
+            
+                <a href="../CSS/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../CSS/boxmodel.html">
+            
+                <a href="../CSS/boxmodel.html">
+            
+                    
+                    盒模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../CSS/selector.html">
+            
+                <a href="../CSS/selector.html">
+            
+                    
+                    选择器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.2.1" data-path="../CSS/selector.html">
+            
+                <a href="../CSS/selector.html">
+            
+                    
+                    优先级策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2.2" data-path="../CSS/selector.html">
+            
+                <a href="../CSS/selector.html">
+            
+                    
+                    伪类/伪元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../CSS/cssinherit.html">
+            
+                <a href="../CSS/cssinherit.html">
+            
+                    
+                    样式表继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../CSS/css3.html">
+            
+                <a href="../CSS/css3.html">
+            
+                    
+                    CSS3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.4.1" data-path="../CSS/css3.html">
+            
+                <a href="../CSS/css3.html">
+            
+                    
+                    Flex & Grid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4.2" data-path="../CSS/css3.html">
+            
+                <a href="../CSS/css3.html">
+            
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4.3" data-path="../CSS/css3.html">
+            
+                <a href="../CSS/css3.html">
+            
+                    
+                    reset.css & rem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4.4" data-path="../CSS/css3.html">
+            
+                <a href="../CSS/css3.html">
+            
+                    
+                    Transform & Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../CSS/bfc.html">
+            
+                <a href="../CSS/bfc.html">
+            
+                    
+                    BFC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.5.1" data-path="../CSS/bfc.html">
+            
+                <a href="../CSS/bfc.html">
+            
+                    
+                    高度塌陷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.2" data-path="../CSS/bfc.html">
+            
+                <a href="../CSS/bfc.html">
+            
+                    
+                    margin合并与塌陷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.3" data-path="../CSS/bfc.html">
+            
+                <a href="../CSS/bfc.html">
+            
+                    
+                    元素水平垂直居中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.4" data-path="../CSS/bfc.html">
+            
+                <a href="../CSS/bfc.html">
+            
+                    
+                    float以及清除float
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.5" data-path="../CSS/bfc.html">
+            
+                <a href="../CSS/bfc.html">
+            
+                    
+                    position 嵌套 & 覆盖
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../JavaScript/">
+            
+                <a href="../JavaScript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../JavaScript/es/es5.html">
+            
+                <a href="../JavaScript/es/es5.html">
+            
+                    
+                    ECMAScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1.1" data-path="../JavaScript/es/es5.html">
+            
+                <a href="../JavaScript/es/es5.html">
+            
+                    
+                    ES5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1.1.1" data-path="../JavaScript/es/es5.html">
+            
+                <a href="../JavaScript/es/es5.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.1.2" data-path="../JavaScript/es/es5.html">
+            
+                <a href="../JavaScript/es/es5.html">
+            
+                    
+                    函数级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.1.3" data-path="../JavaScript/es/es5.html">
+            
+                <a href="../JavaScript/es/es5.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.1.4" data-path="../JavaScript/es/es5.html">
+            
+                <a href="../JavaScript/es/es5.html">
+            
+                    
+                    方法调用/函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.1.5" data-path="../JavaScript/es/es5.html">
+            
+                <a href="../JavaScript/es/es5.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.1.6" data-path="../JavaScript/es/es5.html">
+            
+                <a href="../JavaScript/es/es5.html">
+            
+                    
+                    模块加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1.2.1" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    新的变量声明方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.2" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    变量的解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.3" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    模板字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.4" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    扩展运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.5" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    数组新方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.6" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    ES6数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.7" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.8" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.9" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.10" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2.11" data-path="../JavaScript/es/es6.html">
+            
+                <a href="../JavaScript/es/es6.html">
+            
+                    
+                    Proxy与数据劫持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.3" data-path="../JavaScript/es/es7.html">
+            
+                <a href="../JavaScript/es/es7.html">
+            
+                    
+                    ES7+
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1.3.1" data-path="../JavaScript/es/es7.html">
+            
+                <a href="../JavaScript/es/es7.html">
+            
+                    
+                    async & await
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.4" data-path="../JavaScript/es/protolink.html">
+            
+                <a href="../JavaScript/es/protolink.html">
+            
+                    
+                    原型链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1.4.1" data-path="../JavaScript/es/protolink.html">
+            
+                <a href="../JavaScript/es/protolink.html">
+            
+                    
+                    new 操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.4.2" data-path="../JavaScript/es/protolink.html">
+            
+                <a href="../JavaScript/es/protolink.html">
+            
+                    
+                    bind/call/apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.4.3" data-path="../JavaScript/es/protolink.html">
+            
+                <a href="../JavaScript/es/protolink.html">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../JavaScript/bom/domevent.html">
+            
+                <a href="../JavaScript/bom/domevent.html">
+            
+                    
+                    BOM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.2.1" data-path="../JavaScript/bom/domevent.html">
+            
+                <a href="../JavaScript/bom/domevent.html">
+            
+                    
+                    DOM交互
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.2.1.1" data-path="../JavaScript/bom/domevent.html">
+            
+                <a href="../JavaScript/bom/domevent.html">
+            
+                    
+                    事件代理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.2.1.1.1" data-path="../JavaScript/bom/domevent.html">
+            
+                <a href="../JavaScript/bom/domevent.html">
+            
+                    
+                    冒泡/捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.1.1.2" data-path="../JavaScript/bom/domevent.html">
+            
+                <a href="../JavaScript/bom/domevent.html">
+            
+                    
+                    两种监听方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.2" data-path="../JavaScript/bom/form.html">
+            
+                <a href="../JavaScript/bom/form.html">
+            
+                    
+                    表单管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.2.2.1" data-path="../JavaScript/bom/form.html">
+            
+                <a href="../JavaScript/bom/form.html">
+            
+                    
+                    如何提交一个表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../JavaScript/history.html">
+            
+                <a href="../JavaScript/history.html">
+            
+                    
+                    History API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../JavaScript/xhr.html">
+            
+                <a href="../JavaScript/xhr.html">
+            
+                    
+                    XHR API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../JavaScript/async.html">
+            
+                <a href="../JavaScript/async.html">
+            
+                    
+                    异步机制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.5.1" data-path="../JavaScript/async.html">
+            
+                <a href="../JavaScript/async.html">
+            
+                    
+                    Event Loop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.5.1.1" >
+            
+                <span>
+            
+                    
+                    MacroTask/MicroTask
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../JavaScript/trash.html">
+            
+                <a href="../JavaScript/trash.html">
+            
+                    
+                    垃圾回收机制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.6.1" >
+            
+                <span>
+            
+                    
+                    标记清除/引用计数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../part2/">
+            
+                <a href="../../part2/">
+            
+                    
+                    前端核心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../part3/">
+            
+                <a href="../../part3/">
+            
+                    
+                    前端进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../part4/">
+            
+                <a href="../../part4/">
+            
+                    
+                    计算机基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../part5/">
+            
+                <a href="../../part5/">
+            
+                    
+                    算法与数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../part6/">
+            
+                <a href="../../part6/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >同源策略</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x540C;&#x6E90;&#x7B56;&#x7565;">&#x540C;&#x6E90;&#x7B56;&#x7565;</h1>
+<h2 id="&#x8DE8;&#x57DF;">&#x8DE8;&#x57DF;</h2>
+<p>&#x540C;&#x6E90;&#x7B56;&#x7565;/SOP&#xFF08;Same origin policy&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x7EA6;&#x5B9A;&#xFF0C;&#x7531;Netscape&#x516C;&#x53F8;1995&#x5E74;&#x5F15;&#x5165;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x5B83;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x6700;&#x6838;&#x5FC3;&#x4E5F;&#x6700;&#x57FA;&#x672C;&#x7684;&#x5B89;&#x5168;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x679C;&#x7F3A;&#x5C11;&#x4E86;&#x540C;&#x6E90;&#x7B56;&#x7565;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5F88;&#x5BB9;&#x6613;&#x53D7;&#x5230;XSS&#x3001;CSFR&#x7B49;&#x653B;&#x51FB;&#x3002;&#x6240;&#x8C13;&#x540C;&#x6E90;&#x662F;&#x6307;&quot;&#x534F;&#x8BAE;+&#x57DF;&#x540D;+&#x7AEF;&#x53E3;&quot;&#x4E09;&#x8005;&#x76F8;&#x540C;&#xFF0C;&#x5373;&#x4FBF;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x57DF;&#x540D;&#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;ip&#x5730;&#x5740;&#xFF0C;&#x4E5F;&#x975E;&#x540C;&#x6E90;&#x3002;   </p>
+<p>&#x4E00;&#x4E2A;&#x7F51;&#x7AD9;&#x7684;&#x7F51;&#x5740;&#x7EC4;&#x6210;&#x5305;&#x62EC;&#x534F;&#x8BAE;&#x540D;&#xFF0C;&#x5B50;&#x57DF;&#x540D;&#xFF0C;&#x4E3B;&#x57DF;&#x540D;&#xFF0C;&#x7AEF;&#x53E3;&#x53F7;&#x3002;&#x6BD4;&#x5982;<code>https://www.github.com:80/</code>&#x3002;&#x5176;&#x4E2D;https&#x662F;&#x534F;&#x8BAE;&#x540D;&#xFF0C;www.github.com&#x662F;&#x5B50;&#x57DF;&#x540D;&#xFF0C;github.com&#x662F;&#x4E3B;&#x57DF;&#x540D;&#xFF0C;&#x7AEF;&#x53E3;&#x53F7;&#x662F;80&#xFF0C;&#x5F53;&#x5728;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x4ECE;&#x4E00;&#x4E2A;url&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;url&#x7684;&#x534F;&#x8BAE;&#x540D;&#x3001;&#x5B50;&#x57DF;&#x540D;&#x3001;&#x4E3B;&#x57DF;&#x540D;&#x3001;&#x7AEF;&#x53E3;&#x53F7;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6709;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#xFF0C;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x8DE8;&#x57DF;&#x95EE;&#x9898;&#x3002;  </p>
+<p>&#x5373;&#x4F7F;&#x662F;&#x5728;<code>http://localhost:80/</code>&#x9875;&#x9762;&#x8BF7;&#x6C42;<code>http://127.0.0.1:80/</code>&#x4E5F;&#x4F1A;&#x6709;&#x8DE8;&#x57DF;&#x95EE;&#x9898;,&#x56E0;&#x4E3A;&#x57DF;&#x540D;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x540C;&#x6E90;&#x7B56;&#x7565;&#x9650;&#x5236;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x884C;&#x4E3A;&#xFF1A;</p>
+<blockquote>
+<p>1.Cookie&#x3001;LocalStorage &#x548C; IndexDB &#x65E0;&#x6CD5;&#x8BFB;&#x53D6;<br>2.DOM &#x548C; Js&#x5BF9;&#x8C61;&#x65E0;&#x6CD5;&#x83B7;&#x5F97;<br>3.AJAX &#x8BF7;&#x6C42;&#x4E0D;&#x80FD;&#x53D1;&#x9001;  </p>
+</blockquote>
+<p><strong>&#x53EF;&#x4EE5;&#x8DE8;&#x57DF;&#x7684;&#x4E09;&#x4E2A;&#x6807;&#x7B7E;</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="undefined">
+</span></code></pre>
+<p><code>&lt;img&gt;</code>&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6253;&#x70B9;&#x7EDF;&#x8BA1;&#xFF0C;&#x7EDF;&#x8BA1;&#x7F51;&#x7AD9;&#x53EF;&#x80FD;&#x662F;&#x5176;&#x4ED6;&#x57DF;<br><code>&lt;link&gt; &lt;script&gt;</code>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;CDN&#xFF0C;CDN&#x662F;&#x5176;&#x4ED6;&#x57DF;<br><code>&lt;script&gt;</code>&#x53EF;&#x4EE5;&#x7528;&#x4E8E;JSONP  </p>
+<h2 id="&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;&#x8DE8;&#x57DF;&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;(&#x8DE8;&#x57DF;&#x89E3;&#x51B3;&#x65B9;&#x6848;)</h2>
+<blockquote>
+<p>1.&#x901A;&#x8FC7;jsonp&#x8DE8;&#x57DF;<br>2.&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;(CORS)<br>3.postMessage&#x8DE8;&#x57DF;<br>4.WebSocket&#x534F;&#x8BAE;&#x8DE8;&#x57DF;<br>5.nginx&#x4EE3;&#x7406;&#x8DE8;&#x57DF;<br>6.nodejs&#x4E2D;&#x95F4;&#x4EF6;&#x4EE3;&#x7406;&#x8DE8;&#x57DF;<br>7.document.domain + iframe<br>8.location.hash + iframe<br>9.<code>window.name</code> + iframe  </p>
+</blockquote>
+<p><strong>&#x4F18;&#x7F3A;&#x70B9;&#x5BF9;&#x6BD4;</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x8DE8;&#x57DF;&#x65B9;&#x5F0F;</th>
+<th style="text-align:left">&#x4F18;&#x70B9;</th>
+<th style="text-align:left">&#x7F3A;&#x70B9;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>JSONP</strong></td>
+<td style="text-align:left">1.script&#x6807;&#x7B7E;&#x517C;&#x5BB9;&#x6027;&#x597D;<br>2.&#x4E0D;&#x9700;&#x8981;&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;</td>
+<td style="text-align:left">&#x53EA;&#x80FD;&#x5B9E;&#x73B0;get&#x4E00;&#x79CD;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>CORS</strong></td>
+<td style="text-align:left">1.&#x88AB;&#x79F0;&#x4E3A;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#x7684;&#x7EC8;&#x6781;&#x89E3;&#x51B3;&#x65B9;&#x6848;<br>2.&#x5B89;&#x5168;&#x6027;&#x5F88;&#x597D;<br>3.&#x76F8;&#x5BF9;&#x4E8E;JSONP&#xFF0C;&#x652F;&#x6301;&#x6240;&#x6709;&#x7684;http&#x8BF7;&#x6C42;<br>4.&#x524D;&#x7AEF;&#x51E0;&#x4E4E;&#x4E0D;&#x7528;&#x5E72;&#x4EC0;&#x4E48;<br></td>
+<td style="text-align:left">1.&#x517C;&#x5BB9;&#x6027;&#x4E0D;&#x597D; IE10+ IE8+<br>2.&#x9700;&#x8981;&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;<br>3.&#x7406;&#x89E3;&#x590D;&#x6742;<br></td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-jsonp&#x8DE8;&#x57DF;">1. JSONP&#x8DE8;&#x57DF;</h3>
+<p>&#x901A;&#x5E38;&#x4E3A;&#x4E86;&#x51CF;&#x8F7B;web&#x670D;&#x52A1;&#x5668;&#x7684;&#x8D1F;&#x8F7D;&#xFF0C;&#x6211;&#x4EEC;&#x628A;js&#x3001;css&#xFF0C;img&#x7B49;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5206;&#x79BB;&#x5230;&#x53E6;&#x4E00;&#x53F0;&#x72EC;&#x7ACB;&#x57DF;&#x540D;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x5728;html&#x9875;&#x9762;&#x4E2D;&#x518D;&#x901A;&#x8FC7;&#x76F8;&#x5E94;&#x7684;&#x6807;&#x7B7E;&#x4ECE;&#x4E0D;&#x540C;&#x57DF;&#x540D;&#x4E0B;&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF0C;&#x800C;&#x88AB;&#x6D4F;&#x89C8;&#x5668;&#x5141;&#x8BB8;&#xFF0C;&#x57FA;&#x4E8E;&#x6B64;&#x539F;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x52A8;&#x6001;&#x521B;&#x5EFA;script&#xFF0C;&#x518D;&#x8BF7;&#x6C42;&#x4E00;&#x4E2A;&#x5E26;&#x53C2;&#x7F51;&#x5740;&#x5B9E;&#x73B0;&#x8DE8;&#x57DF;&#x901A;&#x4FE1;&#x3002;  </p>
+<p>1.&#xFF09;&#x539F;&#x751F;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-js"> &lt;script&gt;
+    var script = document.createElement(&apos;script&apos;);
+    script.type = &apos;text/javascript&apos;;
+
+    // &#x4F20;&#x53C2;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x540D;&#x7ED9;&#x540E;&#x7AEF;&#xFF0C;&#x65B9;&#x4FBF;&#x540E;&#x7AEF;&#x8FD4;&#x56DE;&#x65F6;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x5728;&#x524D;&#x7AEF;&#x5B9A;&#x4E49;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+    script.src = &apos;http://www.domain2.com:8080/login?user=admin&amp;callback=handleCallback&apos;;
+    document.head.appendChild(script);
+
+    // &#x56DE;&#x8C03;&#x6267;&#x884C;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;
+    function handleCallback(res) {
+        alert(JSON.stringify(res));
+    }
+ &lt;/script&gt;
+</code></pre>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x8FD4;&#x56DE;&#x5982;&#x4E0B;&#xFF08;&#x8FD4;&#x56DE;&#x65F6;&#x5373;&#x6267;&#x884C;&#x5168;&#x5C40;&#x51FD;&#x6570;&#xFF09;&#xFF1A;<br><code>handleCallback({&quot;status&quot;: true, &quot;user&quot;: &quot;admin&quot;})</code>  </p>
+<p>2.&#xFF09;jquery ajax&#xFF1A;</p>
+<pre><code class="lang-js">$.ajax({
+    url: <span class="hljs-string">&apos;http://www.domain2.com:8080/login&apos;</span>,
+    type: <span class="hljs-string">&apos;get&apos;</span>,
+    dataType: <span class="hljs-string">&apos;jsonp&apos;</span>,  <span class="hljs-comment">// &#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x4E3A;jsonp</span>
+    jsonpCallback: <span class="hljs-string">&quot;handleCallback&quot;</span>,    <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x540D;</span>
+    data: {}
+});
+</code></pre>
+<p>3.&#xFF09;vue.js&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">this</span>.$http.jsonp(<span class="hljs-string">&apos;http://www.domain2.com:8080/login&apos;</span>, {
+    params: {},
+    jsonp: <span class="hljs-string">&apos;handleCallback&apos;</span>
+}).then((res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(res); 
+})
+</code></pre>
+<p>&#x540E;&#x7AEF;node.js&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> querystring = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;querystring&apos;</span>);
+<span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">var</span> server = http.createServer();
+
+server.on(<span class="hljs-string">&apos;request&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">var</span> params = qs.parse(req.url.split(<span class="hljs-string">&apos;?&apos;</span>)[<span class="hljs-number">1</span>]);
+    <span class="hljs-keyword">var</span> fn = params.callback;
+
+    <span class="hljs-comment">// jsonp&#x8FD4;&#x56DE;&#x8BBE;&#x7F6E;</span>
+    res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/javascript&apos;</span> });
+    res.write(fn + <span class="hljs-string">&apos;(&apos;</span> + <span class="hljs-built_in">JSON</span>.stringify(params) + <span class="hljs-string">&apos;)&apos;</span>);
+
+    res.end();
+});
+
+server.listen(<span class="hljs-string">&apos;8080&apos;</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server is running at port 8080...&apos;</span>);
+</code></pre>
+<p><strong>jsonp&#x4F18;&#x70B9;&#xFF1A;script&#x6807;&#x7B7E;&#x517C;&#x5BB9;&#x6027;&#x597D;</strong><br><strong>jsonp&#x7F3A;&#x70B9;&#xFF1A;&#x53EA;&#x80FD;&#x5B9E;&#x73B0;get&#x4E00;&#x79CD;&#x8BF7;&#x6C42;&#x3002;</strong>  </p>
+<h3 id="2-&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;cors">2. &#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;(CORS)</h3>
+<p>&#x666E;&#x901A;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#xFF1A;&#x53EA;&#x670D;&#x52A1;&#x7AEF;&#x8BBE;&#x7F6E;Access-Control-Allow-Origin&#x5373;&#x53EF;&#xFF0C;&#x524D;&#x7AEF;&#x65E0;&#x987B;&#x8BBE;&#x7F6E;&#xFF0C;&#x82E5;&#x8981;&#x5E26;cookie&#x8BF7;&#x6C42;&#xFF1A;&#x524D;&#x540E;&#x7AEF;&#x90FD;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x3002;  </p>
+<p>&#x9700;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;&#x7531;&#x4E8E;&#x540C;&#x6E90;&#x7B56;&#x7565;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x6240;&#x8BFB;&#x53D6;&#x7684;cookie&#x4E3A;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x6240;&#x5728;&#x57DF;&#x7684;cookie&#xFF0C;&#x800C;&#x975E;&#x5F53;&#x524D;&#x9875;&#x3002;&#x5982;&#x679C;&#x60F3;&#x5B9E;&#x73B0;&#x5F53;&#x524D;&#x9875;cookie&#x7684;&#x5199;&#x5165;&#xFF0C;&#x53EF;&#x53C2;&#x8003;&#x4E0B;&#x6587;&#xFF1A;&#x4E03;&#x3001;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x4E2D;&#x8BBE;&#x7F6E;proxy_cookie_domain &#x548C; &#x516B;&#x3001;NodeJs&#x4E2D;&#x95F4;&#x4EF6;&#x4EE3;&#x7406;&#x4E2D;cookieDomainRewrite&#x53C2;&#x6570;&#x7684;&#x8BBE;&#x7F6E;&#x3002;  </p>
+<p>&#x76EE;&#x524D;&#xFF0C;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301;&#x8BE5;&#x529F;&#x80FD;(IE8+&#xFF1A;IE8/9&#x9700;&#x8981;&#x4F7F;&#x7528;XDomainRequest&#x5BF9;&#x8C61;&#x6765;&#x652F;&#x6301;CORS&#xFF09;)&#xFF0C;CORS&#x4E5F;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x4E3B;&#x6D41;&#x7684;&#x8DE8;&#x57DF;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;  </p>
+<p>&#x68C0;&#x67E5;&#x6D4F;&#x89C8;&#x5668;&#x662F;&#x5426;&#x652F;&#x6301;CORS<br>&#x652F;&#x6301;XMLHttpRequest 2.0  &#x5219;&#x4E3A;&#x6807;&#x51C6;&#x6D4F;&#x89C8;&#x5668;<br>&#x68C0;&#x67E5; withCredentials &#x5B58;&#x5728;&#x8BE5;&#x5B57;&#x6BB5;&#x5219;&#x4E3A;2.0<br>&#x652F;&#x6301; XDomainRequest &#x5219;&#x4E3A; IE8</p>
+<p><strong>&#x524D;&#x7AEF;&#x8BBE;&#x7F6E;</strong><br>1.&#xFF09;&#x539F;&#x751F;ajax</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x524D;&#x7AEF;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5E26;cookie</span>
+xhr.withCredentials = <span class="hljs-literal">true</span>;
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest(); <span class="hljs-comment">// IE8/9&#x9700;&#x7528;window.XDomainRequest&#x517C;&#x5BB9;</span>
+
+<span class="hljs-comment">// &#x524D;&#x7AEF;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5E26;cookie</span>
+xhr.withCredentials = <span class="hljs-literal">true</span>;
+
+xhr.open(<span class="hljs-string">&apos;post&apos;</span>, <span class="hljs-string">&apos;http://www.domain2.com:8080/login&apos;</span>, <span class="hljs-literal">true</span>);
+xhr.setRequestHeader(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;application/x-www-form-urlencoded&apos;</span>);
+xhr.send(<span class="hljs-string">&apos;user=admin&apos;</span>);
+
+xhr.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (xhr.readyState == <span class="hljs-number">4</span> &amp;&amp; xhr.status == <span class="hljs-number">200</span>) {
+        alert(xhr.responseText);
+    }
+};
+</code></pre>
+<p>2.&#xFF09;jQuery ajax</p>
+<pre><code class="lang-js">$.ajax({
+    ...
+   xhrFields: {
+       withCredentials: <span class="hljs-literal">true</span>    <span class="hljs-comment">// &#x524D;&#x7AEF;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5E26;cookie</span>
+   },
+   crossDomain: <span class="hljs-literal">true</span>,   <span class="hljs-comment">// &#x4F1A;&#x8BA9;&#x8BF7;&#x6C42;&#x5934;&#x4E2D;&#x5305;&#x542B;&#x8DE8;&#x57DF;&#x7684;&#x989D;&#x5916;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x542B;cookie</span>
+    ...
+});
+</code></pre>
+<p>3.&#xFF09;vue&#x6846;&#x67B6;  </p>
+<blockquote>
+<p>a.) axios&#x8BBE;&#x7F6E;<br><code>axios.defaults.withCredentials = true</code><br>b.) vue-resource&#x8BBE;&#x7F6E;<br><code>Vue.http.options.credentials = true</code>  </p>
+</blockquote>
+<p><strong>&#x670D;&#x52A1;&#x7AEF;&#x8BBE;&#x7F6E;</strong><br>&#x82E5;&#x540E;&#x7AEF;&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x524D;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x5219;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x8DE8;&#x57DF;&#x62A5;&#x9519;&#x4FE1;&#x606F;&#xFF0C;&#x53CD;&#x4E4B;&#xFF0C;&#x8BF4;&#x660E;&#x6CA1;&#x8BBE;&#x6210;&#x529F;&#x3002;  </p>
+<p>1.&#xFF09;Java&#x540E;&#x53F0;  </p>
+<pre><code class="lang-js"><span class="hljs-comment">/*
+ * &#x5BFC;&#x5165;&#x5305;&#xFF1A;import javax.servlet.http.HttpServletResponse;
+ * &#x63A5;&#x53E3;&#x53C2;&#x6570;&#x4E2D;&#x5B9A;&#x4E49;&#xFF1A;HttpServletResponse response
+ */</span>
+
+<span class="hljs-comment">// &#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;&#x7684;&#x57DF;&#x540D;&#xFF1A;&#x82E5;&#x6709;&#x7AEF;&#x53E3;&#x9700;&#x5199;&#x5168;&#xFF08;&#x534F;&#x8BAE;+&#x57DF;&#x540D;+&#x7AEF;&#x53E3;&#xFF09;&#xFF0C;&#x82E5;&#x6CA1;&#x6709;&#x7AEF;&#x53E3;&#x672B;&#x5C3E;&#x4E0D;&#x7528;&#x52A0;&apos;/&apos;</span>
+response.setHeader(<span class="hljs-string">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="hljs-string">&quot;http://www.domain1.com&quot;</span>); 
+
+<span class="hljs-comment">// &#x5141;&#x8BB8;&#x524D;&#x7AEF;&#x5E26;&#x8BA4;&#x8BC1;cookie&#xFF1A;&#x542F;&#x7528;&#x6B64;&#x9879;&#x540E;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x57DF;&#x540D;&#x4E0D;&#x80FD;&#x4E3A;&apos;*&apos;&#xFF0C;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x5177;&#x4F53;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x5426;&#x5219;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x63D0;&#x793A;</span>
+response.setHeader(<span class="hljs-string">&quot;Access-Control-Allow-Credentials&quot;</span>, <span class="hljs-string">&quot;true&quot;</span>); 
+
+<span class="hljs-comment">// &#x63D0;&#x793A;OPTIONS&#x9884;&#x68C0;&#x65F6;&#xFF0C;&#x540E;&#x7AEF;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x4E24;&#x4E2A;&#x5E38;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x5934;</span>
+response.setHeader(<span class="hljs-string">&quot;Access-Control-Allow-Headers&quot;</span>, <span class="hljs-string">&quot;Content-Type,X-Requested-With&quot;</span>);
+</code></pre>
+<p>2.&#xFF09;Nodejs&#x540E;&#x53F0;&#x793A;&#x4F8B;  </p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">var</span> server = http.createServer();
+<span class="hljs-keyword">var</span> qs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;querystring&apos;</span>);
+
+server.on(<span class="hljs-string">&apos;request&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">var</span> postData = <span class="hljs-string">&apos;&apos;</span>;
+
+    <span class="hljs-comment">// &#x6570;&#x636E;&#x5757;&#x63A5;&#x6536;&#x4E2D;</span>
+    req.addListener(<span class="hljs-string">&apos;data&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">chunk</span>) </span>{
+        postData += chunk;
+    });
+
+    <span class="hljs-comment">// &#x6570;&#x636E;&#x63A5;&#x6536;&#x5B8C;&#x6BD5;</span>
+    req.addListener(<span class="hljs-string">&apos;end&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        postData = qs.parse(postData);
+
+        <span class="hljs-comment">// &#x8DE8;&#x57DF;&#x540E;&#x53F0;&#x8BBE;&#x7F6E;</span>
+        res.writeHead(<span class="hljs-number">200</span>, {
+            <span class="hljs-string">&apos;Access-Control-Allow-Credentials&apos;</span>: <span class="hljs-string">&apos;true&apos;</span>,     <span class="hljs-comment">// &#x540E;&#x7AEF;&#x5141;&#x8BB8;&#x53D1;&#x9001;Cookie</span>
+            <span class="hljs-string">&apos;Access-Control-Allow-Origin&apos;</span>: <span class="hljs-string">&apos;http://www.domain1.com&apos;</span>,    <span class="hljs-comment">// &#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;&#x57DF;&#xFF08;&#x534F;&#x8BAE;+&#x57DF;&#x540D;+&#x7AEF;&#x53E3;&#xFF09;</span>
+            <span class="hljs-comment">/* 
+             * &#x6B64;&#x5904;&#x8BBE;&#x7F6E;&#x7684;cookie&#x8FD8;&#x662F;domain2&#x7684;&#x800C;&#x975E;domain1&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x7AEF;&#x4E5F;&#x4E0D;&#x80FD;&#x8DE8;&#x57DF;&#x5199;cookie(nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;)&#xFF0C;
+             * &#x4F46;&#x53EA;&#x8981;domain2&#x4E2D;&#x5199;&#x5165;&#x4E00;&#x6B21;cookie&#x8BA4;&#x8BC1;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x8DE8;&#x57DF;&#x63A5;&#x53E3;&#x90FD;&#x80FD;&#x4ECE;domain2&#x4E2D;&#x83B7;&#x53D6;cookie&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x6240;&#x6709;&#x7684;&#x63A5;&#x53E3;&#x90FD;&#x80FD;&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;
+             */</span>
+            <span class="hljs-string">&apos;Set-Cookie&apos;</span>: <span class="hljs-string">&apos;l=a123456;Path=/;Domain=www.domain2.com;HttpOnly&apos;</span>  <span class="hljs-comment">// HttpOnly&#x7684;&#x4F5C;&#x7528;&#x662F;&#x8BA9;js&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;cookie</span>
+        });
+
+        res.write(<span class="hljs-built_in">JSON</span>.stringify(postData));
+        res.end();
+    });
+});
+
+server.listen(<span class="hljs-string">&apos;8080&apos;</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server is running at port 8080...&apos;</span>);
+</code></pre>
+<h3 id="3-postmessage&#x8DE8;&#x57DF;">3. postMessage&#x8DE8;&#x57DF;</h3>
+<p>postMessage&#x662F;HTML5 XMLHttpRequest Level 2&#x4E2D;&#x7684;API&#xFF0C;&#x4E14;&#x662F;&#x4E3A;&#x6570;&#x4E0D;&#x591A;&#x53EF;&#x4EE5;&#x8DE8;&#x57DF;&#x64CD;&#x4F5C;&#x7684;window&#x5C5E;&#x6027;&#x4E4B;&#x4E00;&#xFF0C;&#x5B83;&#x53EF;&#x7528;&#x4E8E;&#x89E3;&#x51B3;&#x4EE5;&#x4E0B;&#x65B9;&#x9762;&#x7684;&#x95EE;&#x9898;&#xFF1A;<br>a.&#xFF09; &#x9875;&#x9762;&#x548C;&#x5176;&#x6253;&#x5F00;&#x7684;&#x65B0;&#x7A97;&#x53E3;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;<br>b.&#xFF09; &#x591A;&#x7A97;&#x53E3;&#x4E4B;&#x95F4;&#x6D88;&#x606F;&#x4F20;&#x9012;<br>c.&#xFF09; &#x9875;&#x9762;&#x4E0E;&#x5D4C;&#x5957;&#x7684;iframe&#x6D88;&#x606F;&#x4F20;&#x9012;<br>d.&#xFF09; &#x4E0A;&#x9762;&#x4E09;&#x4E2A;&#x573A;&#x666F;&#x7684;&#x8DE8;&#x57DF;&#x6570;&#x636E;&#x4F20;&#x9012;  </p>
+<p>&#x7528;&#x6CD5;&#xFF1A;postMessage(data,origin)&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;<br>data&#xFF1A; html5&#x89C4;&#x8303;&#x652F;&#x6301;&#x4EFB;&#x610F;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x6216;&#x53EF;&#x590D;&#x5236;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x90E8;&#x5206;&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x652F;&#x6301;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6240;&#x4EE5;&#x4F20;&#x53C2;&#x65F6;&#x6700;&#x597D;&#x7528;JSON.stringify()&#x5E8F;&#x5217;&#x5316;&#x3002;<br>origin&#xFF1A; &#x534F;&#x8BAE;+&#x4E3B;&#x673A;+&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&quot;*&quot;&#xFF0C;&#x8868;&#x793A;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7ED9;&#x4EFB;&#x610F;&#x7A97;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x6307;&#x5B9A;&#x548C;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x540C;&#x6E90;&#x7684;&#x8BDD;&#x8BBE;&#x7F6E;&#x4E3A;&quot;/&quot;&#x3002;  </p>
+<p>1.&#xFF09;a.html&#xFF1A;(<a href="http://www.domain1.com/a.html" target="_blank">http://www.domain1.com/a.html</a>)</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;iframe&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://www.domain2.com/b.html&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display:none;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">       
+    <span class="hljs-keyword">var</span> iframe = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;iframe&apos;</span>);
+    iframe.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> data = {
+            name: <span class="hljs-string">&apos;aym&apos;</span>
+        };
+        <span class="hljs-comment">// &#x5411;domain2&#x4F20;&#x9001;&#x8DE8;&#x57DF;&#x6570;&#x636E;</span>
+        iframe.contentWindow.postMessage(<span class="hljs-built_in">JSON</span>.stringify(data), <span class="hljs-string">&apos;http://www.domain2.com&apos;</span>);
+    };
+
+    <span class="hljs-comment">// &#x63A5;&#x53D7;domain2&#x8FD4;&#x56DE;&#x6570;&#x636E;</span>
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        alert(<span class="hljs-string">&apos;data from domain2 ---&gt; &apos;</span> + e.data);
+    }, <span class="hljs-literal">false</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>2.&#xFF09;b.html&#xFF1A;(<a href="http://www.domain2.com/b.html" target="_blank">http://www.domain2.com/b.html</a>)</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-comment">// &#x63A5;&#x6536;domain1&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        alert(<span class="hljs-string">&apos;data from domain1 ---&gt; &apos;</span> + e.data);
+
+        <span class="hljs-keyword">var</span> data = <span class="hljs-built_in">JSON</span>.parse(e.data);
+        <span class="hljs-keyword">if</span> (data) {
+            data.number = <span class="hljs-number">16</span>;
+
+            <span class="hljs-comment">// &#x5904;&#x7406;&#x540E;&#x518D;&#x53D1;&#x56DE;domain1</span>
+            <span class="hljs-built_in">window</span>.parent.postMessage(<span class="hljs-built_in">JSON</span>.stringify(data), <span class="hljs-string">&apos;http://www.domain1.com&apos;</span>);
+        }
+    }, <span class="hljs-literal">false</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="4-websocket&#x534F;&#x8BAE;&#x8DE8;&#x57DF;">4. WebSocket&#x534F;&#x8BAE;&#x8DE8;&#x57DF;</h3>
+<p>WebSocket protocol&#x662F;HTML5&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x534F;&#x8BAE;&#x3002;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x6D4F;&#x89C8;&#x5668;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x5168;&#x53CC;&#x5DE5;&#x901A;&#x4FE1;&#xFF0C;&#x540C;&#x65F6;&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x901A;&#x8BAF;&#xFF0C;&#x662F;server push&#x6280;&#x672F;&#x7684;&#x4E00;&#x79CD;&#x5F88;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x3002;<br>&#x539F;&#x751F;WebSocket API&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x4E0D;&#x592A;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>Socket.io</code>&#xFF0C;&#x5B83;&#x5F88;&#x597D;&#x5730;&#x5C01;&#x88C5;&#x4E86;webSocket&#x63A5;&#x53E3;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x7B80;&#x5355;&#x3001;&#x7075;&#x6D3B;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4E5F;&#x5BF9;&#x4E0D;&#x652F;&#x6301;webSocket&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x4E86;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x3002;  </p>
+<p>1.&#xFF09;&#x524D;&#x7AEF;&#x4EE3;&#x7801;&#xFF1A;  </p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>user input&#xFF1A;<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/socket.io/2.2.0/socket.io.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">var</span> socket = io(<span class="hljs-string">&apos;http://www.domain2.com:8080&apos;</span>);
+
+<span class="hljs-comment">// &#x8FDE;&#x63A5;&#x6210;&#x529F;&#x5904;&#x7406;</span>
+socket.on(<span class="hljs-string">&apos;connect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// &#x76D1;&#x542C;&#x670D;&#x52A1;&#x7AEF;&#x6D88;&#x606F;</span>
+    socket.on(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;data from server: ---&gt; &apos;</span> + msg); 
+    });
+
+    <span class="hljs-comment">// &#x76D1;&#x542C;&#x670D;&#x52A1;&#x7AEF;&#x5173;&#x95ED;</span>
+    socket.on(<span class="hljs-string">&apos;disconnect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ 
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server socket has closed.&apos;</span>); 
+    });
+});
+
+<span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&apos;input&apos;</span>)[<span class="hljs-number">0</span>].onblur = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    socket.send(<span class="hljs-keyword">this</span>.value);
+};
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>2.&#xFF09;Nodejs socket&#x540E;&#x53F0;&#xFF1A;  </p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">var</span> socket = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;socket.io&apos;</span>);
+
+<span class="hljs-comment">// &#x542F;http&#x670D;&#x52A1;</span>
+<span class="hljs-keyword">var</span> server = http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    res.writeHead(<span class="hljs-number">200</span>, {
+        <span class="hljs-string">&apos;Content-type&apos;</span>: <span class="hljs-string">&apos;text/html&apos;</span>
+    });
+    res.end();
+});
+
+server.listen(<span class="hljs-string">&apos;8080&apos;</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server is running at port 8080...&apos;</span>);
+
+<span class="hljs-comment">// &#x76D1;&#x542C;socket&#x8FDE;&#x63A5;</span>
+socket.listen(server).on(<span class="hljs-string">&apos;connection&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">client</span>) </span>{
+    <span class="hljs-comment">// &#x63A5;&#x6536;&#x4FE1;&#x606F;</span>
+    client.on(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+        client.send(<span class="hljs-string">&apos;hello&#xFF1A;&apos;</span> + msg);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;data from client: ---&gt; &apos;</span> + msg);
+    });
+
+    <span class="hljs-comment">// &#x65AD;&#x5F00;&#x5904;&#x7406;</span>
+    client.on(<span class="hljs-string">&apos;disconnect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Client socket has closed.&apos;</span>); 
+    });
+});
+</code></pre>
+<h3 id="5-nginx&#x4EE3;&#x7406;&#x8DE8;&#x57DF;">5. nginx&#x4EE3;&#x7406;&#x8DE8;&#x57DF;</h3>
+<p>&#x8DE8;&#x57DF;&#x539F;&#x7406;&#xFF1A; &#x540C;&#x6E90;&#x7B56;&#x7565;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5B89;&#x5168;&#x7B56;&#x7565;&#xFF0C;&#x4E0D;&#x662F;HTTP&#x534F;&#x8BAE;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x8C03;&#x7528;HTTP&#x63A5;&#x53E3;&#x53EA;&#x662F;&#x4F7F;&#x7528;HTTP&#x534F;&#x8BAE;&#xFF0C;&#x4E0D;&#x4F1A;&#x6267;&#x884C;JS&#x811A;&#x672C;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x540C;&#x6E90;&#x7B56;&#x7565;&#xFF0C;&#x4E5F;&#x5C31;&#x4E0D;&#x5B58;&#x5728;&#x8DE8;&#x8D8A;&#x95EE;&#x9898;&#x3002;  </p>
+<p>&#x5B9E;&#x73B0;&#x601D;&#x8DEF;&#xFF1A;&#x901A;&#x8FC7;nginx&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x57DF;&#x540D;&#x4E0E;domain1&#x76F8;&#x540C;&#xFF0C;&#x7AEF;&#x53E3;&#x4E0D;&#x540C;&#xFF09;&#x505A;&#x8DF3;&#x677F;&#x673A;&#xFF0C;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x8BBF;&#x95EE;domain2&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x987A;&#x4FBF;&#x4FEE;&#x6539;cookie&#x4E2D;domain&#x4FE1;&#x606F;&#xFF0C;&#x65B9;&#x4FBF;&#x5F53;&#x524D;&#x57DF;cookie&#x5199;&#x5165;&#xFF0C;&#x5B9E;&#x73B0;&#x8DE8;&#x57DF;&#x767B;&#x5F55;&#x3002;  </p>
+<h3 id="6-nodejs&#x4E2D;&#x95F4;&#x4EF6;&#x4EE3;&#x7406;&#x8DE8;&#x57DF;">6. nodejs&#x4E2D;&#x95F4;&#x4EF6;&#x4EE3;&#x7406;&#x8DE8;&#x57DF;</h3>
+<p>node&#x4E2D;&#x95F4;&#x4EF6;&#x5B9E;&#x73B0;&#x8DE8;&#x57DF;&#x4EE3;&#x7406;&#xFF0C;&#x539F;&#x7406;&#x5927;&#x81F4;&#x4E0E;nginx&#x76F8;&#x540C;&#xFF0C;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x542F;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7684;&#x8F6C;&#x53D1;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;cookieDomainRewrite&#x53C2;&#x6570;&#x4FEE;&#x6539;&#x54CD;&#x5E94;&#x5934;&#x4E2D;cookie&#x4E2D;&#x57DF;&#x540D;&#xFF0C;&#x5B9E;&#x73B0;&#x5F53;&#x524D;&#x57DF;&#x7684;cookie&#x5199;&#x5165;&#xFF0C;&#x65B9;&#x4FBF;&#x63A5;&#x53E3;&#x767B;&#x5F55;&#x8BA4;&#x8BC1;&#x3002;  </p>
+<h3 id="7-documentdomain--iframe">7. document.domain + iframe</h3>
+<p>&#x6B64;&#x65B9;&#x6848;&#x4EC5;&#x9650;&#x4E3B;&#x57DF;&#x76F8;&#x540C;&#xFF0C;&#x5B50;&#x57DF;&#x4E0D;&#x540C;&#x7684;&#x8DE8;&#x57DF;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;  </p>
+<p>&#x5B9E;&#x73B0;&#x539F;&#x7406;&#xFF1A;&#x4E24;&#x4E2A;&#x9875;&#x9762;&#x90FD;&#x901A;&#x8FC7;js&#x5F3A;&#x5236;&#x8BBE;&#x7F6E;document.domain&#x4E3A;&#x57FA;&#x7840;&#x4E3B;&#x57DF;&#xFF0C;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x540C;&#x57DF;&#x3002;  </p>
+<p>1.&#xFF09;&#x7236;&#x7A97;&#x53E3;&#xFF1A;(<code>http://www.domain.com/a.html</code>)</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;iframe&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://child.domain.com/b.html&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">document</span>.domain = <span class="hljs-string">&apos;domain.com&apos;</span>;
+    <span class="hljs-keyword">var</span> user = <span class="hljs-string">&apos;admin&apos;</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>2.&#xFF09;&#x5B50;&#x7A97;&#x53E3;&#xFF1A;(<code>http://child.domain.com/b.html</code>)</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">document</span>.domain = <span class="hljs-string">&apos;domain.com&apos;</span>;
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x7236;&#x7A97;&#x53E3;&#x4E2D;&#x53D8;&#x91CF;</span>
+    alert(<span class="hljs-string">&apos;get js data from parent ---&gt; &apos;</span> + <span class="hljs-built_in">window</span>.parent.user);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="8-locationhash--iframe">8. location.hash + iframe</h3>
+<p>&#x5B9E;&#x73B0;&#x539F;&#x7406;&#xFF1A; a&#x6B32;&#x4E0E;b&#x8DE8;&#x57DF;&#x76F8;&#x4E92;&#x901A;&#x4FE1;&#xFF0C;&#x901A;&#x8FC7;&#x4E2D;&#x95F4;&#x9875;c&#x6765;&#x5B9E;&#x73B0;&#x3002; &#x4E09;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x4E0D;&#x540C;&#x57DF;&#x4E4B;&#x95F4;&#x5229;&#x7528;iframe&#x7684;location.hash&#x4F20;&#x503C;&#xFF0C;&#x76F8;&#x540C;&#x57DF;&#x4E4B;&#x95F4;&#x76F4;&#x63A5;js&#x8BBF;&#x95EE;&#x6765;&#x901A;&#x4FE1;&#x3002;  </p>
+<p>&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF1A;A&#x57DF;&#xFF1A;a.html -&gt; B&#x57DF;&#xFF1A;b.html -&gt; A&#x57DF;&#xFF1A;c.html&#xFF0C;a&#x4E0E;b&#x4E0D;&#x540C;&#x57DF;&#x53EA;&#x80FD;&#x901A;&#x8FC7;hash&#x503C;&#x5355;&#x5411;&#x901A;&#x4FE1;&#xFF0C;b&#x4E0E;c&#x4E5F;&#x4E0D;&#x540C;&#x57DF;&#x4E5F;&#x53EA;&#x80FD;&#x5355;&#x5411;&#x901A;&#x4FE1;&#xFF0C;&#x4F46;c&#x4E0E;a&#x540C;&#x57DF;&#xFF0C;&#x6240;&#x4EE5;c&#x53EF;&#x901A;&#x8FC7;parent.parent&#x8BBF;&#x95EE;a&#x9875;&#x9762;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x3002;  </p>
+<p>1.&#xFF09;a.html&#xFF1A;(<code>http://www.domain1.com/a.html</code>)</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;iframe&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://www.domain2.com/b.html&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display:none;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> iframe = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;iframe&apos;</span>);
+
+    <span class="hljs-comment">// &#x5411;b.html&#x4F20;hash&#x503C;</span>
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        iframe.src = iframe.src + <span class="hljs-string">&apos;#user=admin&apos;</span>;
+    }, <span class="hljs-number">1000</span>);
+
+    <span class="hljs-comment">// &#x5F00;&#x653E;&#x7ED9;&#x540C;&#x57DF;c.html&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onCallback</span>(<span class="hljs-params">res</span>) </span>{
+        alert(<span class="hljs-string">&apos;data from c.html ---&gt; &apos;</span> + res);
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>2.&#xFF09;b.html&#xFF1A;(<code>http://www.domain2.com/b.html</code>)</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;iframe&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://www.domain1.com/c.html&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display:none;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> iframe = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;iframe&apos;</span>);
+
+    <span class="hljs-comment">// &#x76D1;&#x542C;a.html&#x4F20;&#x6765;&#x7684;hash&#x503C;&#xFF0C;&#x518D;&#x4F20;&#x7ED9;c.html</span>
+    <span class="hljs-built_in">window</span>.onhashchange = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        iframe.src = iframe.src + location.hash;
+    };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>3.&#xFF09;c.html&#xFF1A;(<code>http://www.domain1.com/c.html</code>)</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-comment">// &#x76D1;&#x542C;b.html&#x4F20;&#x6765;&#x7684;hash&#x503C;</span>
+    <span class="hljs-built_in">window</span>.onhashchange = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-comment">// &#x518D;&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x540C;&#x57DF;a.html&#x7684;js&#x56DE;&#x8C03;&#xFF0C;&#x5C06;&#x7ED3;&#x679C;&#x4F20;&#x56DE;</span>
+        <span class="hljs-built_in">window</span>.parent.parent.onCallback(<span class="hljs-string">&apos;hello: &apos;</span> + location.hash.replace(<span class="hljs-string">&apos;#user=&apos;</span>, <span class="hljs-string">&apos;&apos;</span>));
+    };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="9-windowname--iframe">9. <code>window.name</code> + iframe</h3>
+<p>window.name&#x5C5E;&#x6027;&#x7684;&#x72EC;&#x7279;&#x4E4B;&#x5904;&#xFF1A;name&#x503C;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x9875;&#x9762;&#xFF08;&#x751A;&#x81F3;&#x4E0D;&#x540C;&#x57DF;&#x540D;&#xFF09;&#x52A0;&#x8F7D;&#x540E;&#x4F9D;&#x65E7;&#x5B58;&#x5728;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x975E;&#x5E38;&#x957F;&#x7684; name &#x503C;&#xFF08;2MB&#xFF09;&#x3002;  </p>
+<p>1.&#xFF09;a.html&#xFF1A;(<code>http://www.domain1.com/a.html</code>)  </p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> proxy = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, callback</span>) </span>{
+    <span class="hljs-keyword">var</span> state = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">var</span> iframe = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;iframe&apos;</span>);
+
+    <span class="hljs-comment">// &#x52A0;&#x8F7D;&#x8DE8;&#x57DF;&#x9875;&#x9762;</span>
+    iframe.src = url;
+
+    <span class="hljs-comment">// onload&#x4E8B;&#x4EF6;&#x4F1A;&#x89E6;&#x53D1;2&#x6B21;&#xFF0C;&#x7B2C;1&#x6B21;&#x52A0;&#x8F7D;&#x8DE8;&#x57DF;&#x9875;&#xFF0C;&#x5E76;&#x7559;&#x5B58;&#x6570;&#x636E;&#x4E8E;window.name</span>
+    iframe.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">if</span> (state === <span class="hljs-number">1</span>) {
+            <span class="hljs-comment">// &#x7B2C;2&#x6B21;onload(&#x540C;&#x57DF;proxy&#x9875;)&#x6210;&#x529F;&#x540E;&#xFF0C;&#x8BFB;&#x53D6;&#x540C;&#x57DF;window.name&#x4E2D;&#x6570;&#x636E;</span>
+            callback(iframe.contentWindow.name);
+            destoryFrame();
+
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (state === <span class="hljs-number">0</span>) {
+            <span class="hljs-comment">// &#x7B2C;1&#x6B21;onload(&#x8DE8;&#x57DF;&#x9875;)&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x540C;&#x57DF;&#x4EE3;&#x7406;&#x9875;&#x9762;</span>
+            iframe.contentWindow.location = <span class="hljs-string">&apos;http://www.domain1.com/proxy.html&apos;</span>;
+            state = <span class="hljs-number">1</span>;
+        }
+    };
+
+    <span class="hljs-built_in">document</span>.body.appendChild(iframe);
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x6570;&#x636E;&#x4EE5;&#x540E;&#x9500;&#x6BC1;&#x8FD9;&#x4E2A;iframe&#xFF0C;&#x91CA;&#x653E;&#x5185;&#x5B58;&#xFF1B;&#x8FD9;&#x4E5F;&#x4FDD;&#x8BC1;&#x4E86;&#x5B89;&#x5168;&#xFF08;&#x4E0D;&#x88AB;&#x5176;&#x4ED6;&#x57DF;frame js&#x8BBF;&#x95EE;&#xFF09;</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">destoryFrame</span>(<span class="hljs-params"></span>) </span>{
+        iframe.contentWindow.document.write(<span class="hljs-string">&apos;&apos;</span>);
+        iframe.contentWindow.close();
+        <span class="hljs-built_in">document</span>.body.removeChild(iframe);
+    }
+};
+
+<span class="hljs-comment">// &#x8BF7;&#x6C42;&#x8DE8;&#x57DF;b&#x9875;&#x9762;&#x6570;&#x636E;</span>
+proxy(<span class="hljs-string">&apos;http://www.domain2.com/b.html&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    alert(data);
+});
+</code></pre>
+<p>2.&#xFF09;proxy.html&#xFF1A;(<code>http://www.domain1.com/proxy</code>)<br>&#x4E2D;&#x95F4;&#x4EE3;&#x7406;&#x9875;&#xFF0C;&#x4E0E;a.html&#x540C;&#x57DF;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#x7A7A;&#x5373;&#x53EF;&#x3002;</p>
+<p>3.&#xFF09;b.html&#xFF1A;(<code>http://www.domain2.com/b.html</code>)</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">window</span>.name = <span class="hljs-string">&apos;This is domain2 data!&apos;</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;iframe&#x7684;src&#x5C5E;&#x6027;&#x7531;&#x5916;&#x57DF;&#x8F6C;&#x5411;&#x672C;&#x5730;&#x57DF;&#xFF0C;&#x8DE8;&#x57DF;&#x6570;&#x636E;&#x5373;&#x7531;iframe&#x7684;window.name&#x4ECE;&#x5916;&#x57DF;&#x4F20;&#x9012;&#x5230;&#x672C;&#x5730;&#x57DF;&#x3002;&#x8FD9;&#x4E2A;&#x5C31;&#x5DE7;&#x5999;&#x5730;&#x7ED5;&#x8FC7;&#x4E86;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;&#x9650;&#x5236;&#xFF0C;&#x4F46;&#x540C;&#x65F6;&#x5B83;&#x53C8;&#x662F;&#x5B89;&#x5168;&#x64CD;&#x4F5C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="OriginPolicy.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 跨域访问方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"同源策略","level":"1.2.1.3","depth":3,"next":{"title":"跨域访问方法","level":"1.2.1.3.1","depth":4,"path":"part1/browser/OriginPolicy.md","ref":"part1/browser/OriginPolicy.md","articles":[]},"previous":{"title":"IndexDB","level":"1.2.1.2.3.3","depth":5,"ref":"","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part1/browser/OriginPolicy.md","mtime":"2020-03-18T16:02:45.312Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-04T09:42:48.758Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
