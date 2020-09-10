@@ -1,0 +1,253 @@
+# 基本数据类型
+
+## 基本数据类型
+
+简单数据类型
+
+* undefined  
+* null  
+* number  
+* boolean  
+* string  
+
+复杂数据类型
+
+* object  
+
+**NaN**  
+NaN 跟谁都不相等，包括它自己  
+如何检测一个东西是不是NaN
+
+* ES5  
+  利用NaN跟自己不相等的特性  
+  检测 a!=a ，如果成立 则为NaN  
+  其他不管什么类型 都会和自己相等
+
+  > a != a  
+  > false: 不是NaN  
+  > true: 是NaN
+
+* ES6 直接使用isNaN\(\) 判断
+
+**typeof**  
+**typeof 是用来检测数据类型的**
+
+* 返回一个小写字母的类型字符串  
+* 只需要一个操作数  可以是 简单数据类型或者函数或者对象  
+
+| 1 | 2 | 3 |
+| :---: | :---: | :---: |
+| 11 | 21 | 31 |
+| 12 | 22 | 32 |
+| 13 | 23 | 33 |
+
+| 操作数 | typeof 输出 |
+| :---: | :---: |
+| undefined | "undefined" |
+| true | "boolean" |
+| false | "boolean" |
+| 123 | "number" |
+| 6.66 | "number" |
+| NaN | "number" |
+| 'haha' | "string" |
+| "sdeouf" | "string" |
+| f = function\(\){} | "function" |
+| Symbol | "function" |
+| new Function\(\) | "function" |
+| \[\] | "object" |
+| {} | "object" |
+| null | "object" |
+| new Array\(\) | "object" |
+| new Error\(\) | "object" |
+| new Number\(\) new String\(\) new Date\(\) new Object\(\) new RegExp\(\) | "object" |
+|  |  |
+
+**instanceof 是用来检测对象的类型的**  
+简单的说，typeof检测出一个东西是 object 类型，但不知道具体是哪个 object 类型，这时候用 instanceof 即可检测出
+
+instanceof 左边必须是实例，js中所有引用类型都是object的实例  
+所以左边必须是 引用类型值  
+数组、对象、new创建的新函数 都属于引用类型值
+
+| 表达式 | instanceof 输出 |
+| :---: | :---: |
+| 'haha' instanceof  String | false |
+| 998 instanceof  Number | false |
+| true instanceof  Boolean | false |
+| \[1,2\] instanceof  Array | true |
+| new Number\(978\) instanceof  Number | true |
+|  |  |
+
+**两者的对比**
+
+| 对比 | typeof | instanceof |
+| :---: | :---: | :---: |
+| 作用 | 检测数据类型 | 检测对象之间的关联性 |
+| 返回 | 小写字母字符串 | 布尔值 |
+| 操作数 | 简单数据类型、 函数或者对象 | 左边必须是引用类型 右边必须是函数 |
+| 操作数数量 | 1 | 2 |
+|  |  |  |
+
+**== 和 ===**  
+**相等运算符 == 会进行类型的转换**  
+**全等运算符 === 不会进行类型的转换**
+
+| 表达式 | 判断结果 |
+| :---: | :---: |
+| 6 == 6 | true |
+| 6 === 6 | true |
+| 6 == "6" | true |
+| 6 === "6" | false |
+|  |  |
+| true == 1 | true |
+| false == 0 | true |
+| true === 1 | false |
+| false == 0 | false |
+|  |  |
+| 'false' == false | false |
+| NaN == NaN | false |
+| NaN == false | false |
+| NaN === false | false |
+|  |  |
+| var a={}    var b={}    var c=a |  |
+| a == b | false |
+| a === b | false |
+| a == c | true |
+| a === c | true |
+|  |  |
+
+* 数字字符串可转换为数字，布尔值也可以转为数字，但字符串和布尔值不能互转  
+* null和undefined都表示未定义，是假值，故相等，所以未定义和已定义的变量肯定不相等  
+* NaN表示一个不确切的数值，所以它跟谁都不相等  
+* 比较引用类型数据的时候，比较的是引用类型数据的地址  
+
+**何时使用双等，何时使用三等**
+
+```javascript
+//检查一个对象里的 a 属性存不存在的时候
+if(obj.a == null){
+    //这里相当于 obj.a === null || obj.a === undefined
+}
+//其余使用全用三等
+```
+
+## 函数级作用域
+
+ES 5 里面有去全局作用域和函数级作用域
+
+ES 6 里有块级作用域
+
+作用域链  
+子函数没有的变量，找该函数定义的父级
+
+```javascript
+var a = 666;
+function show(){
+    var a = 12;
+    function show2(){
+        console.log(a);
+    }
+    show2()
+}
+show()
+//输出12
+```
+
+## 闭包\(closure\)
+
+IIFE\(Immediately Invoked Function Expression\) 匿名函数自执行
+
+```javascript
+(function(){
+    var num1 = 111;
+})();
+
+(function(){
+    var num2 = 222;
+})();
+```
+
+函数和对其周围状态（lexical environment，词法环境）的引用捆绑在一起构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在 JavaScript 中，每当函数被创建，就会在函数生成时生成闭包。
+
+## 方法调用/函数调用
+
+## 高阶函数
+
+高阶函数\(Higher-order function\)  
+JavaScript的函数其实都指向某个变量。既然变量可以指向函数，函数的参数能接收变量，那么一个函数就可以**接收另一个函数作为参数**，这种函数就称之为高阶函数。
+
+```javascript
+function add(x, y, f) {//函数作为参数
+    return f(x) + f(y);
+}
+var x = add(-5, 6, Math.abs); // 11
+console.log(x);
+```
+
+常用高阶函数
+
+**map**  
+由于map\(\)方法定义在JavaScript的Array中，我们调用Array的map\(\)方法，传入我们自己的函数，就得到了一个新的Array作为结果
+
+```javascript
+function pow(x) {
+    return x * x;
+}
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+arr.map(pow); // [1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+//map()传入的参数是pow，即函数对象本身。
+```
+
+**reduce**  
+Array的reduce\(\)把一个函数作用在这个Array的\[x1, x2, x3...\]上，这个函数必须接收两个参数，reduce\(\)把结果继续和序列的下一个元素做累积计算，其效果就是：
+
+> \[x1, x2, x3, x4\].reduce\(f\) = f\(f\(f\(x1, x2\), x3\), x4\)
+
+```javascript
+//把[1, 3, 5, 7, 9]变换成整数13579
+var arr = [1, 3, 5, 7, 9];
+arr.reduce(function (x, y) {
+    return x * 10 + y;
+}); // 13579
+```
+
+**filter**  
+filter也是一个常用的操作，它用于把Array的某些元素过滤掉，然后返回剩下的元素。  
+filter\(\)把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。返回true则保留，返回false则过滤掉。
+
+```javascript
+//过滤偶数，保留奇数
+var arr = [1, 2, 4, 5, 6, 9, 10, 15];
+var r = arr.filter(function (x) {
+    return x % 2 !== 0; //return true 的值保留  
+});
+r; // [1, 5, 9, 15]
+```
+
+filter\(\)接收的回调函数有多个参数。第一个参数，表示Array的某个元素;另外两个参数，表示元素的位置和数组本身
+
+```javascript
+var arr = ['A', 'B', 'C'];
+var r = arr.filter(function (element, index, self) {
+    console.log(element); // 依次打印'A', 'B', 'C'
+    console.log(index); // 依次打印0, 1, 2
+    console.log(self); // self就是变量arr
+    return true;
+});
+```
+
+```javascript
+//利用filter巧妙地给数组去重
+var r,
+arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
+r = arr.filter(function (element, index, self) {
+    return self.indexOf(element) === index;
+});
+//去除重复元素依靠的是indexOf总是返回第一个元素的位置，后续的重复元素位置与indexOf返回的位置不相等，因此被filter滤掉了。
+```
+
+**sort**
+
+## 模块加载
+

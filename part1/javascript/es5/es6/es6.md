@@ -1,0 +1,502 @@
+# 新的变量声明方式
+
+## 新的变量声明方式
+
+let 变量
+
+* 防止覆盖
+* 块级作用域  
+
+const 常量
+
+* 块级作用域
+* 禁止修改
+
+## 变量的解构赋值
+
+1.什么是解构赋值
+
+```javascript
+//ES6之前
+var a = 1;
+var b = 2;
+var c = 3;
+//ES6之后
+let [a,b,c] = [1,2,3];
+```
+
+2.注意  
+可置空
+
+```javascript
+[,,third] = [1,2,3];
+console.log(third); //3
+let[a,b,c] = [,,3]  //undefined
+```
+
+无关顺序
+
+```javascript
+let{a,b,c} = {"c":10, "b":9, "a":3};
+```
+
+3.应用  
+典型应用交换两个变量
+
+```javascript
+let [x,y] = [1,2];
+[x,y] = [y,x];
+console.log(x); //2
+console.log(y); //1
+```
+
+## 模板字符串
+
+更优雅、省事
+
+```javascript
+str = '我是'+name+'今年'+age+'爱好'+girl;      //ES 5 字符串拼接
+str = `我是${name}，今年${age}，爱好${girl}`;  //ES 6 字符串拼接
+```
+
+## 扩展运算符
+
+扩展运算符\(spread\)是三个点\(...\)  
+可以将一个数组转为用逗号分隔的参数序列\(即取里面的内容\)
+
+a\)数组合并
+
+```javascript
+var arr1 = ['a','b'];
+var arr2 = ['c'];
+var arr3 = ['d','e'];
+//ES5
+arr1.concat(arr2,arr3);     //['a', 'b', 'c', 'd', 'e']
+//ES6
+[...arr1, ...arr2, ...arr3] //['a', 'b', 'c', 'd', 'e']
+```
+
+b\)拷贝数组和对象
+
+```javascript
+//拷贝数组
+var arr0 = [1,2,3];
+var arr1 = [...arr0]; // [1,2,3]
+//拷贝对象
+var obj = {
+    age: 1,
+    name: 'lls',
+    arr: {
+        a1:[1,2]
+    }
+};
+var obj2 = {...obj};
+```
+
+c\)伪数组转数组
+
+```javascript
+var aDiv = document.getElementsByTagName('div');
+console.log([...aDiv]); //[div,div,div,...]
+```
+
+rest运算符  
+与扩展运算符相反
+
+```javascript
+// arguments变量的写法
+function sortNumbers(){
+    return Array.prototype.slice.call(arguments).sort();
+}
+//rest参数的写法
+const sortNumbers = (...numbers) => numbers.sort();
+```
+
+## 数组新方法
+
+| 新方法 | 用途 |
+| :---: | :---: |
+| Array.from | 数组复制    类数组转数组 |
+| find | 返回第一个满足条件的元素，否则返回undefined |
+| findIndex | 类似indexOf，返回位置 |
+| includes | 类似indexOf，返回true 和 false |
+| Array.flat | 数组的拍平  arr.flat\(想要拍平的层数\) |
+
+## ES6数据结构
+
+1.set 集合  
+没有重复值的数组  
+set里key和value是相等的
+
+```javascript
+new Set([iterable]);
+//iterable如果传递一个可迭代对象，它的所有元素将不重复地被添加到新的 Set中。如果不指定此参数或其值为null，则新的 Set为空。
+//遍历set
+for (let item of mySet.keys()) console.log(item);
+```
+
+|  |  |
+| :---: | :---: |
+| 增 | add |
+| 删 | delete clear |
+| 查 | has  key = value |
+| 迭代\(遍历\) | s.size\(获取长度\) |
+|  |  |
+
+2.map  
+对象保存键值对，并且能够记住键的原始插入顺序。任何值\(对象或者原始值\) 都可以作为一个键或一个值。
+
+```javascript
+new Map([iterable])
+//Iterable 可以是一个数组或者其他 iterable 对象，其元素为键值对(两个元素的数组，例如: [[ 1, 'one' ],[ 2, 'two' ]])。 每个键值对都会添加到新的 Map。null 会被当做 undefined。
+```
+
+|  |  |
+| :---: | :---: |
+| 增 | set |
+| 查 | get |
+| 删 | delete clear |
+| 查 | has |
+| 迭代\(遍历\) | foreach |
+
+Map 和 Object 比较
+
+* 一个Object的键只能是字符串或者 Symbols，但一个 Map 的键可以是任意值，包括函数、对象、基本类型。
+* Map 中的键值是有序的，而添加到对象中的键则不是。因此，当对它进行遍历时，Map 对象是按插入的顺序返回键值。
+* 你可以通过 size 属性直接获取一个 Map 的键值对个数，而 Object 的键值对个数只能手动计算。
+* Map 可直接进行迭代，而 Object 的迭代需要先获取它的键数组，然后再进行迭代。
+
+  Object 都有自己的原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。
+
+* Map 在涉及频繁增删键值对的场景下会有些性能优势
+
+## 迭代器
+
+生成器对象是由一个 generator function 返回的,并且它符合可迭代协议和迭代器协议。
+
+```javascript
+function* gen() { 
+  yield 1;
+  yield 2;
+  yield 3;
+}
+let g = gen(); 
+// "Generator { }"
+```
+
+一个无限迭代器
+
+```javascript
+function* idMaker(){
+    let index = 0;
+    while(true)
+        yield index++;
+}
+
+let gen = idMaker(); // "Generator { }"
+
+console.log(gen.next().value); 
+// 0
+console.log(gen.next().value); 
+// 1
+console.log(gen.next().value); 
+// 2
+// ...
+```
+
+## 箭头函数
+
+箭头函数表达式的语法比函数表达式更简洁，并且没有自己的this，arguments，super或new.target。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
+
+**箭头函数不会创建自己的this,它只会从自己的作用域链的上一层继承this。**  
+因此，在下面的代码中，传递给setInterval的函数内的this与封闭函数中的this值相同：
+
+```javascript
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| 正确地指向 p 实例
+                // 若不使用箭头函数，则this为全局对象，并不是Person
+  }, 1000);
+}
+
+var p = new Person();
+```
+
+## Class
+
+**类元素**  
+公有字段  
+公有实例字段存在于类的每一个实例中。通过声明一个公有字段，我们可以确保该字段一直存在，而类的定义则会更加像是自我描述。
+
+```javascript
+class ClassWithInstanceField {
+  instanceField = 'instance field';
+}
+
+const instance = new ClassWithInstanceField();
+console.log(instance.instanceField);
+// 预期输出值: "instance field"
+```
+
+私有字段  
+私有实例字段是通过\# names句型（读作“哈希名称”）声明的，即为识别符加一个前缀“\#”。“\#”是名称的一部分，也用于访问和声明。
+
+```javascript
+class ClassWithPrivateField {
+  #privateField;
+
+  constructor() {
+    this.#privateField = 42;
+    this.#randomField = 666; # Syntax error
+  }
+}
+const instance = new ClassWithPrivateField();
+instance.#privateField === 42; // Syntax error
+```
+
+**构造方法**  
+constructor 是一种用于创建和初始化class创建的对象的特殊方法。
+
+```javascript
+class Polygon {
+  constructor() {
+    this.name = "Polygon";
+  }
+}
+
+const poly1 = new Polygon();
+
+console.log(poly1.name);
+// expected output: "Polygon"
+```
+
+**继承**  
+extends关键字用于类声明或者类表达式中，以创建一个类，该类是另一个类的子类。
+
+```javascript
+class Square extends Polygon {
+  constructor(length) {
+    // Here, it calls the parent class' constructor with lengths
+    // provided for the Polygon's width and height
+    super(length, length);
+    // Note: In derived classes, super() must be called before you
+    // can use 'this'. Leaving this out will cause a reference error.
+    this.name = 'Square';
+  }
+
+  get area() {
+    return this.height * this.width;
+  }
+}
+```
+
+super这个关键字，既可以当作函数使用，也可以当作对象使用。当作函数使用时，super代表父类的构造函数，并在子类中执行Parent.apply\(this\)，从而将父类实例对象的属性和方法，添加到子类的this上面。以下三点需要特别注意：
+
+* 子类必须在constructor方法中调用super方法，如果子类没有定义constructor方法，constructor方法以及其内部的super方法会被默认添加。
+* 在子类的constructor方法中，只有调用super之后，才可以使用this关键字，否则会报错。
+* super\(\)只能用在子类的constructor方法之中，用在其他地方就会报错。
+
+**在一个方法前加上关键字static，就表示该方法不会被实例继承，但是父类的静态方法，会被子类继承。**  
+也可以使用super在子类的静态方法中调用父类的静态方法。super在静态方法中指向父类本身，而不是父类的原型对象。
+
+**实现继承的几种方式**
+
+**static**  
+类（class）通过 static 关键字定义静态方法。不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。
+
+```javascript
+class ClassWithStaticMethod {
+  static staticMethod() {
+    return 'static method has been called.';
+  }
+}
+
+console.log(ClassWithStaticMethod.staticMethod());
+// expected output: "static method has been called."
+```
+
+## Promise
+
+Promise是异步编程的一种解决方案，比传统的解决方案-回调函数和事件更合理更强大  
+Promise 是一个对象，它有三种状态： 对象的状态不受外界影响
+
+* pending: 初始状态、进行中
+* fulfilled: 代表操作成功
+* rejected: 代表操作失败
+
+一旦状态改变就不会再变 （两种状态改变：成功或失败）
+
+* Pending -&gt; Fulfilled
+* Pending -&gt; Rejected
+
+```javascript
+var promise = new Promise(function(resolve, reject){
+    // ... some code
+
+    if (/* 异步操作成功 */) {
+        resolve(value);
+    } else {
+        reject(error);
+    }
+})
+```
+
+Promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolve和reject。它们是两个函数，由JavaScript引擎提供，不用自己部署。  
+resolve作用是将Promise对象状态由“未完成”变为“成功”，也就是Pending -&gt; Fulfilled，在异步操作成功时调用，并将异步操作的结果作为参数传递出去；而reject函数则是将Promise对象状态由“未完成”变为“失败”，也就是Pending -&gt; Rejected，在异步操作失败时调用，并将异步操作的结果作为参数传递出去。
+
+```javascript
+let promise = new Promise(function(resolve, reject){
+    console.log("1");
+    resolve();
+});
+setTimeout(()=>console.log("2"), 0);
+promise.then(() => console.log("3"));
+console.log("4");
+// 1->4->3->2
+```
+
+1.在Promise新建后会立即开始执行其下面的代码  
+2.then方法指定的回调函数将在当前脚本所有同步任务执行完后才会执行  
+3.先输出Promise的then，而后输出定时器任务。原因则是Promise属于JavaScript引擎内部任务，而setTimeout则是浏览器API，而引擎内部任务优先级高于浏览器API任务
+
+**promise组合**  
+Promise.all\(\) 和 Promise.race\(\) 是并行运行异步操作的两个组合式工具。  
+我们可以发起并行操作，然后等多个操作全部结束后进行下一步操作，如下：
+
+```javascript
+Promise.all([func1(), func2(), func3()])
+.then(([result1, result2, result3]) => { /* use result1, result2 and result3 */ });
+```
+
+Promise.all\(iterable\)  
+方法返回一个 Promise 实例，此实例在 iterable 参数内所有的 promise 都“完成（resolved）”或参数中不包含 promise 时回调完成（resolve）；如果参数中 promise 有一个失败（rejected），此实例回调失败（reject），失败原因的是第一个失败 promise 的结果。
+
+```javascript
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 100, 'foo');
+});
+
+Promise.all([promise1, promise2, promise3]).then(function(values) {
+  console.log(values);
+});
+// expected output: Array [3, 42, "foo"]
+```
+
+Promise.race\(iterable\)  
+方法返回一个 promise，一旦迭代器中的某个promise解决或拒绝，返回的 promise就会解决或拒绝。
+
+```javascript
+const promise1 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 100, 'two');
+});
+
+Promise.race([promise1, promise2]).then(function(value) {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// expected output: "two"
+```
+
+## Proxy 与数据劫持
+
+Proxy 对象用于定义基本操作的自定义行为（如属性查找，赋值，枚举，函数调用等）。
+
+```javascript
+let p = new Proxy(target, handler);
+```
+
+* target ：需要使用Proxy包装的目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）。  
+* handler: 一个对象，其属性是当执行一个操作时定义代理的行为的函数\(可以理解为某种触发器\)。  
+
+  ```javascript
+  let xiaohong = {
+    name: "小红",
+    age: 15
+  };
+  xiaohong = new Proxy(xiaohong, {
+    get(target, key) {
+      let result = target[key];
+      //如果是获取 年龄 属性，则添加 岁字
+      if (key === "age") result += "岁";
+      return result;
+    },
+    set(target, key, value) {
+      if (key === "age" && typeof value !== "number") {
+        throw Error("age字段必须为Number类型");
+      }
+      return Reflect.set(target, key, value);
+    }
+  });
+  //我叫小红 我今年15岁了
+  console.log(`我叫${xiaohong.name}  我今年${xiaohong.age}了`);
+  //报错
+  xiaohong.age = "aa";
+  ```
+
+**数据劫持**  
+即使用`Object.defineProperty()`实现了vue的双向绑定
+
+```javascript
+let obj = {}, txt = ''
+Object.defineProperty(obj,'txt',{
+    set(val) {
+
+        console.log('set ....')
+        txt = val || '';
+    },
+    get() {
+        //获取obj.txt时会触发get的回调。
+        console.log('get ....')
+        return txt
+    }
+})
+```
+
+`Object.defineProperty()` 的缺点
+
+* 无法监听到数组的变化  
+
+  当被监听的属性是数组，这几个方法push、pop、shift、unshift、splice、sort、reverse不会触发set。vue将这几个修改原始的数组的方法称为变异方法  
+
+  当遇到变异方法时旧版本的vue通过重写方法来进行数据劫持  
+
+* 必须遍历对象的每一个属性  
+* 必须深层遍历嵌套对象  
+
+**Proxy数据代理**  
+建立一个proxy代理对象（Proxy的实例），接受你要监听的对象和监听它的handle两个参数。当你要监听的对象发生任何改变，都会被proxy代理拦截来满足需求
+
+```javascript
+var arr = [1,2,3]
+var handle = {
+    //target目标对象 key属性名 receiver实际接受的对象
+    get(target,key,receiver) {
+        console.log(`get ${key}`)
+        // Reflect相当于映射到目标对象上
+        return Reflect.get(target,key,receiver)
+    },
+    set(target,key,value,receiver) {
+        console.log(`set ${key}`)
+        return Reflect.set(target,key,value,receiver)
+    }
+}
+//arr要拦截的对象，handle定义拦截行为
+var proxy = new Proxy(arr,handle)
+proxy.push(4)
+```
+
+Proxy数据代理的优点
+
+* 使用proxy可以解决defineProperty不能监听数组的问题，避免重写数组方法  
+* 不需要再遍历key
+* Proxy handle的拦截处理器除了get、set外还支持多种拦截方式
+* 嵌套查询。实际上proxy get\(\)也是不支持嵌套查询的，解决方法是利用递归代理实现
+
