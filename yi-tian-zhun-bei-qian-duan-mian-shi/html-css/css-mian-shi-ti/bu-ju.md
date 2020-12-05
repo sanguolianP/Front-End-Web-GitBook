@@ -1,6 +1,6 @@
 # 布局
 
-## 盒子模型的宽度如何计算？
+## 1. 盒子模型的宽度如何计算？
 
 ```markup
 <!-- 如下代码，请问 div1 的 offsetWidth 是多大？ -->
@@ -20,7 +20,7 @@ offsetWidth = \(内容宽度 + 内边距 + 边框\)，无外边距。因此**答
 
 如果要让offsetWidth等于100px该怎么做？  加上 box-sizing: border-box \(转换成诡异盒模型\)
 
-## margin纵向重叠的问题
+## 2. margin纵向重叠的问题
 
 ```markup
 <!-- 如下代码, AAA 和 BBB 之间的距离是多少？-->
@@ -44,7 +44,7 @@ offsetWidth = \(内容宽度 + 内边距 + 边框\)，无外边距。因此**答
 * 空白内容的 &lt;p&gt;&lt;/p&gt; 也会重叠
 * **答案：15px**
 
-## margin负值的问题
+## 3. margin负值的问题
 
 **对 margin 的 top left right bottom 设置负值，有何效果？**
 
@@ -52,7 +52,7 @@ offsetWidth = \(内容宽度 + 内边距 + 边框\)，无外边距。因此**答
 * **margin-right 负值，右侧元素向左移动，自身不受影响**
 * **margin-bottom 负值，下侧元素向上移动，自身不受影响**
 
-## BFC的理解和应用
+## 4. BFC的理解和应用
 
 **什么是BFC？ 何如应用？**
 
@@ -70,7 +70,7 @@ offsetWidth = \(内容宽度 + 内边距 + 边框\)，无外边距。因此**答
 
 * **清除浮动 \(常设置overflow: hidden\)**
 
-## float布局的问题，以及clearfix
+## 5. float布局的问题，以及clearfix
 
 **如何实现圣杯布局和双飞翼布局**
 
@@ -99,7 +99,60 @@ offsetWidth = \(内容宽度 + 内边距 + 边框\)，无外边距。因此**答
 }
 ```
 
-## flex 布局问题（画骰子）
+## 6. flex 布局问题（画骰子）
 
 **flex 实现一个三点的骰子**
+
+**flex 常用语法回顾**
+
+* **flex-direction   主轴的方向**
+* **justify-content   主轴对齐方式**
+* **align-items   交叉轴对齐方式**
+* **flex-wrap   是否换行**
+* **align-self   子元素在交叉轴的对齐方式**
+
+```markup
+<!DOCTYPE html>
+<html id="画骰子">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>画骰子</title>
+        <style type="text/css">
+            .box {
+                width: 200px;
+                height: 200px;
+                margin: 20px;
+                padding: 20px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+
+                display: flex;
+                justify-content: space-between;
+
+            }
+            .item {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #666;
+            }
+            .item:nth-child(2) {
+                align-self: center;
+            }
+            .item:nth-child(3) {
+                align-self: flex-end;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </body>
+</html>
+```
 

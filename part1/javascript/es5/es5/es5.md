@@ -5,10 +5,10 @@
 简单数据类型
 
 * undefined  
-* null  
 * number  
 * boolean  
 * string  
+* symbol  // ES6
 
 复杂数据类型
 
