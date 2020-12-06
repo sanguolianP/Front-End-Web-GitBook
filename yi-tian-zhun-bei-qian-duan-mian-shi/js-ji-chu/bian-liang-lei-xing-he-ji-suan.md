@@ -61,7 +61,14 @@ typeof { x:100 } // 'object'
 
 ### 何时使用 === 何时使用 ==
 
+```javascript
+// 除了 == null 之外，其他一律用 ===，例如：
 
+const obj = { x:100 }
+if (obj.a == null) {}
+// 相当于：
+// if (obj.a===null || obj.a===undefined)
+```
 
 ###   
 
@@ -70,4 +77,57 @@ typeof { x:100 } // 'object'
 
 
 ## 3. 变量计算
+
+### \(1\) 字符串拼接
+
+**只要是在 + 两边有字符串的，都会转成字符串进行拼接**
+
+```javascript
+const a = 100 + 10    // 110
+const b = 100 + '10'  // '10010'
+const c = true + '10' // 'true10'
+```
+
+### \(2\) ==
+
+**== 会进行类型转换**
+
+```javascript
+100 == '100'  // true
+0 == ''  // true
+0 == false  // true
+false == ''  // true
+null == undefined  // true
+```
+
+### \(3\) if 语句和逻辑运算
+
+* **truly 变量：!!a === true 的变量**
+* **faslely 变量：!!a === false 的变量**
+
+```javascript
+// 以下是 faslely 变量。除此之外都是truly变量
+!!0 === false
+!!NaN === false
+!!'' === false
+!!null === false
+!!undefined === false
+!!false === false
+```
+
+**在 if 语句和逻辑运算的时候会判断一个变量是 truely 还是 falsely**
+
+```javascript
+// falsely 变量
+const c = ''
+const d = null
+let e
+if (c) {}
+if (d) {}
+if (e) {}
+
+console.log( 10 && 0 )  // 0 
+console.log( '' || 'abc' )  // 'abc'
+console.log( !window.abc )  // true
+```
 
